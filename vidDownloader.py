@@ -6,14 +6,12 @@ from pytube.exceptions import VideoUnavailable
 myPath = "C:\\Users\\Acer\\Downloads\\Downloaded Files" #downloaded files will go here (provide your own)
 
 class methods():
-    #Pinaka bwiset na part (Pagod na pagod na'ko)
     #To-do: 1. video&audio option, 2.search bar and results, 3.record history(optional)
     def download():
         link = userIn.get()
         if(link != ""):
             ytV = YouTube(link)
             title = ytV.title
-            #Top 2 na pinaka bwiset na part
             if("1" == opt.get()):
                 try: 
                     ytV.streams.filter(file_extension='mp4')
